@@ -1,33 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useEffect, useState} from 'react'
 import './App.css'
+import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+const [nftData, setNftData] = useState(null)
+const [loading, setLoading] = useState(true);
+const fetchData = () =>{
+    return new Promise((resolve, reject)=>{
+        fetch("https://dopop-server.onrender.com/nft")
+            .then(response =>response.json())
+            .then(data => resolve(data))
+            .catch(error => reject(error))
+    })
+}
+    useEffect(()=>{
+        fetchData()
+            .then(data => {
+                setNftData(data)
+                setLoading(false)
+            })
+            .catch(error => {
+                console.log(error)
+                setLoading(false)
+            })
+    },[])
+    console.log(nftData);
+if(loading){
+    return <div>loading...</div>
+}
+if(!nftData){
+    return <div>ERROR</div>
+}
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <ul>
+            {nftData.map((nft)=>(
+                <NFTCard key={nft.id}
+                         photo={nft.photo}
+                         type={nft.type}
+                         name={nft.name}
+                         creator={nft.creator}
+                         price={nft.price}
+                />
+
+            ))}
+
+        </ul>
+
     </>
   )
 }
