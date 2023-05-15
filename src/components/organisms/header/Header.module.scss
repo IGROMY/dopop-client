@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15em;
+  max-width: 1340px;
+  width: 100vh;
+  height: 2em;
+  .leftWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8em;
+    .leftText {
+      display: flex;
+      flex-direction: row;
+      gap: 3em;
+    }
+  }
+  .rightWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 3em;
+  }
+
+}
+
+
+

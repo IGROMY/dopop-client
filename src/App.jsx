@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import './App.css'
 import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
+import Header from "./components/organisms/header/Header.jsx";
 
 function App() {
 
@@ -34,6 +35,7 @@ if(!nftData){
 }
   return (
     <>
+        <Header/>
         <ul>
             {nftData.map((nft)=>(
                 <NFTCard key={nft.id}

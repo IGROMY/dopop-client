@@ -1,0 +1,15 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+  border-radius: 20px;
+  width: 14.938em;
+  height: 2.25em;
+  .input {
+    display: inline;
+    outline: none;
+    border: none;
+    background: #262626;
+  }
+}
