@@ -1,4 +1,9 @@
-.container {
+.listItems {
   display: flex;
  flex-wrap: wrap;
+  list-style: none;
+  gap: 2em;
+}
+.container{
+
 }

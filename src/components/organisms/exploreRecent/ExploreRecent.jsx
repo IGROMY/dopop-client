@@ -1,10 +1,28 @@
 import React from 'react';
 import styles from "./ExploreRecent.module.scss"
 import NFTCard from "../../molecules/nftCard/NFTCard.jsx";
-const ExploreRecent = () => {
+import Text from "../../atoms/text/Text.jsx";
+const ExploreRecent = ({data}) => {
     return (
         <div className={styles.container}>
-            <NFTCard/>
+            <div>
+                <Text variant="primary">Explore </Text>
+                <Text variant="secondary">Recent</Text>
+            </div>
+            <ul className={styles.listItems}>
+                {data.map((nft)=>(
+                    <NFTCard key={nft.id}
+                             photo={nft.photo}
+                             icon={nft.icon}
+                             type={nft.type}
+                             name={nft.name}
+                             creator={nft.creator}
+                             price={nft.price}
+                    />
+
+                ))}
+
+            </ul>
         </div>
     );
 };

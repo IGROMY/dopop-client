@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
-import './App.css'
+import './App.module.scss'
 import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
 import Header from "./components/organisms/header/Header.jsx";
+import ExploreRecent from "./components/organisms/exploreRecent/ExploreRecent.jsx";
 
 function App() {
 
@@ -35,21 +36,8 @@ if(!nftData){
 }
   return (
     <>
-        <Header/>
-        <ul>
-            {nftData.map((nft)=>(
-                <NFTCard key={nft.id}
-                         photo={nft.photo}
-                         icon={nft.icon}
-                         type={nft.type}
-                         name={nft.name}
-                         creator={nft.creator}
-                         price={nft.price}
-                />
-
-            ))}
-
-        </ul>
+        {/*<Header/>*/}
+        <ExploreRecent data={nftData}/>
 
     </>
   )
