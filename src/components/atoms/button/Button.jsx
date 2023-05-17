@@ -1,10 +1,16 @@
 import React from 'react';
-
-const Button = () => {
+import cn from "classnames"
+import styles from "./Button.module.scss"
+const Button = ({children, variant}) => {
+    const classes = cn({
+        [styles.connectWallet]: variant==="connectWallet",
+        [styles.viewAllItems]: variant==="viewAllItems",
+        [styles.send]: variant==="send",
+    })
     return (
-        <div>
-            
-        </div>
+        <button className={classes}>
+            {children}
+        </button>
     );
 };
 

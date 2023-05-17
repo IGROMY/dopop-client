@@ -38,6 +38,7 @@ if(!nftData){
             {nftData.map((nft)=>(
                 <NFTCard key={nft.id}
                          photo={nft.photo}
+                         icon={nft.icon}
                          type={nft.type}
                          name={nft.name}
                          creator={nft.creator}
