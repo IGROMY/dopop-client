@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NFTCardAuction.module.scss'
-import background from '../../../assets/images/самая-дорогая-картина-в-мире-Спаситель-Мира.jpg'
+import background from '../../../assets/images/Shrek-Meme-Free-PNG.png'
 import InlineSVG from "react-inlinesvg";
 import fire from '../../../assets/icons/img04 1fire.svg'
 import blockchainIcon from '../../../assets/icons/img04 1fire.svg'

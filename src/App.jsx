@@ -4,6 +4,7 @@ import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
 import Header from "./components/organisms/header/Header.jsx";
 import ExploreRecent from "./components/organisms/exploreRecent/ExploreRecent.jsx";
 import NFTCardAuction from "./components/molecules/NFTCardAuction/NFTCardAuction.jsx";
+import MarketWrapper from "./components/molecules/MarketWrapper/MarketWrapper.jsx";
 
 function App() {
 
@@ -40,6 +41,7 @@ if(!nftData){
         {/*<Header/>*/}
         {/*<ExploreRecent data={nftData}/>*/}
         <NFTCardAuction/>
+        {/*<MarketWrapper/>*/}
     </>
   )
 }

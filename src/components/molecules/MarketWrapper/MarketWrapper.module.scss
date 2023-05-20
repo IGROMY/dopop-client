@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 3em;
+  .insideWrapper {
+    height: 489px;
+    width: 748px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .biggestText {
+      font-weight: 700;
+      font-size: 150px;
+      line-height: 148.9%;
+      white-space: nowrap;
+    }
+    .smallText {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+  .buttonBox {
+    width: 319px;
+    height: 90px;
+    background: linear-gradient(86.06deg, #F55AC3 2.66%, #9F5CEE 124.94%);
+    backdrop-filter: blur(25px);
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    .button {
+      white-space: nowrap;
+      width: 179px;
+      height: 34px;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2em;
+      line-height: 34px;
+    }
+  }
+}
