@@ -5,7 +5,7 @@ import HeaderText from "../../atoms/headerText/HeaderText.jsx";
 import Search from "../../atoms/search/Search.jsx";
 import LightScheme from "../../atoms/lightScheme/LightScheme.jsx";
 import InlineSVG from "react-inlinesvg";
-import foxIcon from "../../../icons/Group 235fox.svg"
+import foxIcon from "../../../assets/icons/Group 235fox.svg"
 const Header = () => {
     return (
         <div className={styles.header}>

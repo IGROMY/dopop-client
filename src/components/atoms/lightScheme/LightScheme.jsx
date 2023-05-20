@@ -1,6 +1,6 @@
 import React from 'react';
 import InlineSVG from "react-inlinesvg";
-import lightIcon from "../../../icons/sun 1.svg"
+import lightIcon from "../../../assets/icons/sun 1.svg"
 import styles from "./LightScheme.module.scss"
 const LightScheme = () => {
     const switchScheme = () => {

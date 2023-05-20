@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Search.module.scss'
 import InlineSVG from "react-inlinesvg";
-import searchLogo from "../../../icons/search 1search.svg"
+import searchLogo from "../../../assets/icons/search 1search.svg"
 const Search = () => {
     return (
         <div className={styles.search}>

@@ -1,0 +1,68 @@
+.cardContainer {
+  width: 313px;
+  height: 313px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .informationWrapper {
+    padding: 0 1em 0 1em;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em;
+    width: 293px;
+    height: 60px;
+    background: rgba(5, 5, 5, 0.3);
+    backdrop-filter: blur(25px);
+    border-radius: 5em;
+    .timerBox {
+      width: 66px;
+      height: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .boxName {
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .boxInfo {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .currentBox {
+      width: 57px;
+      height: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .boxName {
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .boxInfo {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .bidBox {
+      width: 62px;
+      height: 50px;
+      background: rgba(5, 5, 5, 0.5);
+      backdrop-filter: blur(25px);
+      border-radius: 80px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+}

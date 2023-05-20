@@ -3,6 +3,7 @@ import './App.module.scss'
 import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
 import Header from "./components/organisms/header/Header.jsx";
 import ExploreRecent from "./components/organisms/exploreRecent/ExploreRecent.jsx";
+import NFTCardAuction from "./components/molecules/NFTCardAuction/NFTCardAuction.jsx";
 
 function App() {
 
@@ -37,8 +38,8 @@ if(!nftData){
   return (
     <>
         {/*<Header/>*/}
-        <ExploreRecent data={nftData}/>
-
+        {/*<ExploreRecent data={nftData}/>*/}
+        <NFTCardAuction/>
     </>
   )
 }
