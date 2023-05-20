@@ -38,10 +38,10 @@ if(!nftData){
 }
   return (
     <>
-        {/*<Header/>*/}
+        <Header/>
         {/*<ExploreRecent data={nftData}/>*/}
         <NFTCardAuction/>
-        {/*<MarketWrapper/>*/}
+        <MarketWrapper/>
     </>
   )
 }
