@@ -18,32 +18,32 @@ const Creator = () => {
         <div className={styles.creatorWrapper}>
             <div className={styles.heading}>Popular Creators</div>
             <div className={styles.creatorBox}>
-                <ul>
-                    <div>{firstRow.map((creator) => (
+                <div className={styles.creatorLines}>
+                    <li className={styles.listItem}>{firstRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
                             key={creator.id}
                         />
                     ))}
-                    </div>
-                    <div>{secondRow.map((creator) => (
+                    </li>
+                    <li className={styles.listItem}>{secondRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
                             key={creator.id}
                         />
                     ))}
-                    </div>
-                    <div>{thirdRow.map((creator) => (
+                    </li>
+                    <li className={styles.listItem}>{thirdRow.map((creator) => (
                             <CreatorBox
                                 balance={creator.balance}
                                 name={creator.name}
                                 key={creator.id}
                             />
                     ))}
-                    </div>
-                </ul>
+                    </li>
+                </div>
             </div>
         </div>
     );

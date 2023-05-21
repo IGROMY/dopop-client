@@ -6,58 +6,81 @@
   flex-direction: column-reverse;
   border-radius: 30px;
   .informationWrapper {
-    padding: 0 1em 0 1em;
+    padding: 0 1em 0 2em;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0.5em;
-    width: 293px;
-    height: 60px;
+    width: 595px;
+    height: 114px;
     background: rgba(5, 5, 5, 0.3);
     backdrop-filter: blur(25px);
     border-radius: 5em;
-    .timerBox {
-      width: 66px;
-      height: 28px;
+    .auctionWrapper {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
-      .boxName {
-        white-space: nowrap;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
-      }
-      .boxInfo {
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 14px;
+      flex-direction: row;
+      gap: 1.5em;
+      .fireLogo {
+        width: 29.56px;
+        height: 38px;
+    }
+      .timerBox {
+        width: 66px;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .boxName {
+          white-space: nowrap;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        .boxInfo {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          white-space: nowrap;
+        }
       }
     }
-    .currentBox {
-      width: 57px;
-      height: 28px;
+    .currencyWrapper {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
-      .boxName {
-        white-space: nowrap;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
+      flex-direction: row;
+      gap: 1.5em;
+      .currencyLogo {
+        width: 24.71px;
+        height: 40px;
       }
-      .boxInfo {
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 14px;
+      .currentBox {
+        width: 57px;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .currencyLogo {
+          width: 24.71px;
+          height: 40px;
+        }
+        .boxName {
+          white-space: nowrap;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        .boxInfo {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+        }
       }
     }
     .bidBox {
-      width: 62px;
-      height: 50px;
+      width: 143px;
+      height: 94px;
       background: rgba(5, 5, 5, 0.5);
       backdrop-filter: blur(25px);
       border-radius: 80px;
@@ -68,6 +91,9 @@
       font: inherit;
       color: inherit;
       cursor: pointer;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 34px;
     }
   }
 }

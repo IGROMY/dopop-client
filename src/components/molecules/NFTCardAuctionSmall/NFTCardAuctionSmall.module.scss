@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column-reverse;
   border-radius: 30px;
+  justify-content: space-between;
   .informationWrapper {
-    padding: 0 1em 0 1em;
+    padding: 0 0.3em 0 0.3em;
     justify-content: space-between;
     display: flex;
     flex-direction: row;

@@ -17,12 +17,12 @@ const NFTCardAuctionSmall = ({logo, price}) => {
     return (
         <div style={containerBackground} className={styles.cardContainer}>
             <div className={styles.informationWrapper}>
-                <div><InlineSVG src={fire}/></div>
+                <div className={styles.fireLogo}><img src={fire}/></div>
                 <div className={styles.timerBox}>
                     <span className={styles.boxName}>Auction ends</span>
                     <span className={styles.boxInfo}><Timer/></span>
                 </div>
-                <div><InlineSVG src={blockchainIcon}/></div>
+                <div><img src={blockchainIcon}/></div>
                 <div className={styles.currentBox}>
                     <span className={styles.boxName}>Current bid</span>
                     <span className={styles.boxInfo}>{price} ETH</span>
