@@ -4,7 +4,8 @@
   flex-direction: column;
   margin-right: 3em;
   .insideWrapper {
-    height: 489px;
+    position: absolute;
+    height: 100%;
     width: 748px;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,15 @@
+.wrapper {
+  position: relative;
+  margin: 7em 4em 3em 2em;
+  .fourCardsWrapper {
+    position: relative;
+    top: 45em;
+   ul {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+
+   }
+
+  }
+}

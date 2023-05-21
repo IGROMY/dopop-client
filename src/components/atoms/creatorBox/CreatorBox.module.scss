@@ -1,0 +1,29 @@
+.wrapper {
+  width: 327px;
+  height: 137px;
+  background: #262626;
+  backdrop-filter: blur(25px);
+  border-radius: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .avatar {
+    width: 117px;
+    height: 117px;
+    backdrop-filter: blur(25px);
+    border-radius: 80px;
+    margin-right: 0.5em ;
+    padding-left: 1em;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.25em;
+  }
+}

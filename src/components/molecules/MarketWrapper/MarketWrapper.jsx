@@ -11,10 +11,11 @@ const MarketWrapper = () => {
                 <div className={styles.biggestText}>Create, Buy </div>
                 <div className={styles.biggestText}>& Sell NFTs</div>
                 <div className={styles.smallText}>Discover the best & new digital assets</div>
+                 <div className={styles.buttonBox}>
+                     <button className={styles.button} onClick={viewMarket}>View market</button>
+                 </div>
              </div>
-             <div className={styles.buttonBox}>
-                <button className={styles.button} onClick={viewMarket}>View market</button>
-             </div>
+
         </div>
     );
 };

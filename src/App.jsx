@@ -1,47 +1,27 @@
-import {useEffect, useState} from 'react'
 import './App.module.scss'
-import NFTCard from "./components/molecules/nftCard/NFTCard.jsx";
 import Header from "./components/organisms/header/Header.jsx";
 import ExploreRecent from "./components/organisms/exploreRecent/ExploreRecent.jsx";
-import NFTCardAuction from "./components/molecules/NFTCardAuction/NFTCardAuction.jsx";
-import MarketWrapper from "./components/molecules/MarketWrapper/MarketWrapper.jsx";
-
+import HeadingPage from "./components/organisms/headingPage/HeadingPage.jsx";
+import Creator from "./components/molecules/creator/Creator.jsx";
+import {useFetchData} from "./hooks/UseFetchData.js";
+import {API_URL} from "./helpers/fetchData.js";
 function App() {
+const {data, loading} = useFetchData(`${API_URL}/nft`)
 
-const [nftData, setNftData] = useState(null)
-const [loading, setLoading] = useState(true);
-const fetchData = () =>{
-    return new Promise((resolve, reject)=>{
-        fetch("https://dopop-server.onrender.com/nft")
-            .then(response =>response.json())
-            .then(data => resolve(data))
-            .catch(error => reject(error))
-    })
-}
-    useEffect(()=>{
-        fetchData()
-            .then(data => {
-                setNftData(data)
-                setLoading(false)
-            })
-            .catch(error => {
-                console.log(error)
-                setLoading(false)
-            })
-    },[])
-    console.log(nftData);
 if(loading){
     return <div>loading...</div>
 }
-if(!nftData){
+if(!data){
     return <div>ERROR</div>
 }
   return (
     <>
-        <Header/>
-        {/*<ExploreRecent data={nftData}/>*/}
-        <NFTCardAuction/>
-        <MarketWrapper/>
+        {/*<Header/>*/}
+        <ExploreRecent data={data}/>
+        <HeadingPage/>
+        <Creator/>
+
+
     </>
   )
 }
