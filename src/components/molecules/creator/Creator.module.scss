@@ -12,20 +12,28 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 69px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   .creatorBox {
 
     .creatorLines {
       list-style-type: none;
-      .listItem {
+      .topListItem, .botListItem {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0.5em;
         margin-top: 0.5em;
+        padding-left: 10em;
       }
-
+      .midListItem {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.5em;
+        margin-top: 0.5em;
+        padding-left: 5em;
+      }
     }
   }
 }

@@ -19,7 +19,7 @@ const Creator = () => {
             <div className={styles.heading}>Popular Creators</div>
             <div className={styles.creatorBox}>
                 <div className={styles.creatorLines}>
-                    <li className={styles.listItem}>{firstRow.map((creator) => (
+                    <li className={styles.topListItem}>{firstRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
@@ -27,7 +27,7 @@ const Creator = () => {
                         />
                     ))}
                     </li>
-                    <li className={styles.listItem}>{secondRow.map((creator) => (
+                    <li className={styles.midListItem}>{secondRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
@@ -35,7 +35,7 @@ const Creator = () => {
                         />
                     ))}
                     </li>
-                    <li className={styles.listItem}>{thirdRow.map((creator) => (
+                    <li className={styles.botListItem}>{thirdRow.map((creator) => (
                             <CreatorBox
                                 balance={creator.balance}
                                 name={creator.name}
