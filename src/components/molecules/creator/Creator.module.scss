@@ -1,8 +1,10 @@
 .creatorWrapper {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin-top: 50em;
+  overflow-x: hidden;
   .heading {
     width: 460px;
     height: 69px;
@@ -16,15 +18,12 @@
 
     .creatorLines {
       list-style-type: none;
-      overflow: hidden;
-
       .listItem {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0.5em;
         margin-top: 0.5em;
-
       }
 
     }
