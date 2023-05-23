@@ -24,10 +24,11 @@
         gap: 0.5em;
         margin-top: 0.5em;
         padding-left: 10em;
+        transition: 2s;
         &:hover {
           padding-left: 0;
           padding-right: 10em;
-          transition: 3s;
+          transition: 2s;
         }
       }
       .midListItem {
@@ -37,10 +38,11 @@
         gap: 0.5em;
         margin-top: 0.5em;
         padding-left: 5em;
+        transition: 2s;
         &:hover {
           padding-left: 0;
           padding-right: 10em;
-          transition: 3s;
+          transition: 2s;
         }
       }
     }
