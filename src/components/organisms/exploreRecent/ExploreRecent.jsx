@@ -2,9 +2,9 @@ import React from 'react';
 import styles from "./ExploreRecent.module.scss"
 import NFTCard from "../../molecules/nftCard/NFTCard.jsx";
 import Text from "../../atoms/text/Text.jsx";
-const ExploreRecent = ({data}) => {
+const ExploreRecent = ({data, id}) => {
     return (
-        <div className={styles.container}>
+        <div id={id} className={styles.container}>
             <div>
                 <Text variant="primary">Explore </Text>
                 <Text variant="secondary">Recent</Text>

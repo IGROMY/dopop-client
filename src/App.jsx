@@ -19,9 +19,9 @@ if(!data){
     <>
         <div className={styles.layout}>
              <Header/>
-             <HeadingPage/>
-             <Creator/>
-             <ExploreRecent data={data}/>
+             <HeadingPage id='home'/>
+             <Creator id='creators'/>
+             <ExploreRecent data={data} id='marketplace'/>
         </div>
     </>
   )
