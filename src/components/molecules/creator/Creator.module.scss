@@ -15,7 +15,6 @@
     margin-bottom: 1em;
   }
   .creatorBox {
-
     .creatorLines {
       list-style-type: none;
       .topListItem, .botListItem {
@@ -25,6 +24,11 @@
         gap: 0.5em;
         margin-top: 0.5em;
         padding-left: 10em;
+        &:hover {
+          padding-left: 0;
+          padding-right: 10em;
+          transition: 3s;
+        }
       }
       .midListItem {
         display: flex;
@@ -33,10 +37,13 @@
         gap: 0.5em;
         margin-top: 0.5em;
         padding-left: 5em;
+        &:hover {
+          padding-left: 0;
+          padding-right: 10em;
+          transition: 3s;
+        }
       }
     }
   }
 }
-
-
 
