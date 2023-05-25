@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./HeaderText.module.scss";
 
-const HeaderText = ({children}) => {
+const HeaderText = ({children, handleScroll}) => {
 
     return (
-        <span className={styles.headerPrimary}>
+        <span onClick={handleScroll} className={styles.headerPrimary}>
             {children}
         </span>
     );

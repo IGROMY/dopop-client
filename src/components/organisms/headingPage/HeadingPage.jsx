@@ -4,7 +4,7 @@ import NFTCardAuction from "../../molecules/NFTCardAuction/NFTCardAuction.jsx";
 import NFTCardAuctionSmall from "../../molecules/NFTCardAuctionSmall/NFTCardAuctionSmall.jsx";
 import {useFetchData} from "../../../hooks/UseFetchData.js";
 import {API_URL} from "../../../helpers/fetchData.js";
-const HeadingPage = () => {
+const HeadingPage = ({id}) => {
     const {data, loading} = useFetchData(`${API_URL}/nft`)
     const firstFourNFTs = data ? data.slice(0 , 4) : []
 
@@ -15,7 +15,7 @@ const HeadingPage = () => {
         return <div>ERROR</div>
     }
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id={id}>
             <NFTCardAuction/>
             <MarketWrapper/>
             <div className={styles.fourCardsWrapper}>

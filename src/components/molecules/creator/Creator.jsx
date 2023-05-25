@@ -2,7 +2,7 @@ import styles from './Creator.module.scss'
 import CreatorBox from "../../atoms/creatorBox/CreatorBox.jsx";
 import {useFetchData} from "../../../hooks/UseFetchData.js";
 import {API_URL} from "../../../helpers/fetchData.js";
-const Creator = () => {
+const Creator = ({id}) => {
     const {data, loading} = useFetchData(`${API_URL}/creator`)
     const firstRow = data ? data.slice(0 , 5) : []
     const secondRow = data ? data.slice(5 , 10) : []
@@ -15,35 +15,35 @@ const Creator = () => {
         return <div>ERROR</div>
     }
     return (
-        <div className={styles.creatorWrapper}>
+        <div className={styles.creatorWrapper} id={id}>
             <div className={styles.heading}>Popular Creators</div>
             <div className={styles.creatorBox}>
-                <ul>
-                    <div>{firstRow.map((creator) => (
+                <div className={styles.creatorLines}>
+                    <li className={styles.topListItem}>{firstRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
                             key={creator.id}
                         />
                     ))}
-                    </div>
-                    <div>{secondRow.map((creator) => (
+                    </li>
+                    <li className={styles.midListItem}>{secondRow.map((creator) => (
                         <CreatorBox
                             balance={creator.balance}
                             name={creator.name}
                             key={creator.id}
                         />
                     ))}
-                    </div>
-                    <div>{thirdRow.map((creator) => (
+                    </li>
+                    <li className={styles.botListItem}>{thirdRow.map((creator) => (
                             <CreatorBox
                                 balance={creator.balance}
                                 name={creator.name}
                                 key={creator.id}
                             />
                     ))}
-                    </div>
-                </ul>
+                    </li>
+                </div>
             </div>
         </div>
     );

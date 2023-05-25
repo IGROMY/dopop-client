@@ -7,15 +7,22 @@ import LightScheme from "../../atoms/lightScheme/LightScheme.jsx";
 import InlineSVG from "react-inlinesvg";
 import foxIcon from "../../../assets/icons/Group 235fox.svg"
 const Header = () => {
+    const handleScroll = (sectionId) => () => {
+        console.log(sectionId, 'sectionId');
+        const sectionElement = document.getElementById(sectionId);
+        if(sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div className={styles.header}>
             <div className={styles.leftWrapper}>
                 <Logo/>
                 <div className={styles.leftText}>
-                    <HeaderText>Home</HeaderText>
-                    <HeaderText>Marketplace</HeaderText>
-                    <HeaderText>Creators</HeaderText>
-                    <HeaderText>Contact us</HeaderText>
+                    <HeaderText handleScroll={handleScroll('home')} >Home</HeaderText>
+                    <HeaderText handleScroll={handleScroll('marketplace')}>Marketplace</HeaderText>
+                    <HeaderText handleScroll={handleScroll('creators')}>Creators</HeaderText>
+                    <HeaderText handleScroll={handleScroll('contactUs')}>Contact us</HeaderText>
                 </div>
             </div>
             <div className={styles.rightWrapper}>
