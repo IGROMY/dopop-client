@@ -3,6 +3,9 @@ import styles from "./ExploreRecent.module.scss"
 import NFTCard from "../../molecules/nftCard/NFTCard.jsx";
 import Text from "../../atoms/text/Text.jsx";
 const ExploreRecent = ({data}) => {
+    const viewAllItems = () => {
+        console.log(1)
+    }
     return (
         <div className={styles.container}>
             <div>
@@ -23,6 +26,11 @@ const ExploreRecent = ({data}) => {
                 ))}
 
             </ul>
+            {/*<div className={styles.containerButton}>*/}
+            {/*    <div className={styles.buttonBox}>*/}
+            {/*        <button className={styles.button} onClick={viewAllItems}>View all items</button>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
         </div>
     );
 };

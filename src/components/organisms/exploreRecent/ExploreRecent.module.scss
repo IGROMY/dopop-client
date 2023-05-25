@@ -6,4 +6,43 @@
 }
 .container{
 
+.containerButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+  .buttonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    padding: 23px 40px;
+    gap: 10px;
+
+    position: absolute;
+    width: 206px;
+    height: 69px;
+
+    cursor: pointer;
+    background: #262626;
+    backdrop-filter: blur(25px);
+
+    border-radius: 80px;
+    .button{
+      white-space: nowrap;
+      width: 126px;
+      height: 23px;
+      border: none;
+      font: inherit;
+      color: #FFFFFF;
+      background-color: transparent;
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}
 }

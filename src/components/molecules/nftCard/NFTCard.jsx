@@ -27,8 +27,6 @@ const NFTCard = ({price, name, photo, creator, type}) => {
                 </div>
             </div>
 
-
-
         </div>
 
     );

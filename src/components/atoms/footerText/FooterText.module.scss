@@ -1,0 +1,16 @@
+.footerText {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    cursor: pointer;
+    color: #7C7E80;
+    white-space: nowrap;
+    transition: color 0.3s, font-weight 0.3s;
+    &:hover {
+      color: #C7C8C8;
+      font-weight: 700;
+    }
+
+}
