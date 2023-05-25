@@ -23,11 +23,7 @@ const ExploreRecent = ({data, id}) => {
                 ))}
 
             </ul>
-            {/*<div className={styles.containerButton}>*/}
-            {/*    <div className={styles.buttonBox}>*/}
-            {/*        <button className={styles.button} onClick={viewAllItems}>View all items</button>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+
         </div>
     );
 };

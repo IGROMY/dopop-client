@@ -4,12 +4,15 @@
   margin: 7em 4em 3em 2em;
   .fourCardsLive {
     position: relative;
-    //top: 45em;
+
     ul {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-
+      justify-content: flex-start;
+      gap: 1em;
+      //margin-left: -2em;
+      flex-wrap: wrap;
+      padding-left: 0;
     }
 
   }

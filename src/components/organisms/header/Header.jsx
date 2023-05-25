@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './Header.module.scss'
 import Logo from "../../atoms/logo/Logo.jsx";
 import HeaderText from "../../atoms/headerText/HeaderText.jsx";
@@ -6,7 +6,10 @@ import Search from "../../atoms/search/Search.jsx";
 import LightScheme from "../../atoms/lightScheme/LightScheme.jsx";
 import InlineSVG from "react-inlinesvg";
 import foxIcon from "../../../assets/icons/Group 235fox.svg"
+import {useContext} from "react";
+import {ThemeContext} from "../../../providers/TheneContext.js";
 const Header = () => {
+    const { toggleTheme } = useContext(ThemeContext);
     const handleScroll = (sectionId) => () => {
         console.log(sectionId, 'sectionId');
         const sectionElement = document.getElementById(sectionId);
@@ -27,7 +30,7 @@ const Header = () => {
             </div>
             <div className={styles.rightWrapper}>
                 <Search/>
-                <LightScheme/>
+                <LightScheme handleClick={toggleTheme}/>
                 <div> <InlineSVG src={foxIcon}/></div>
             </div>
         </div>

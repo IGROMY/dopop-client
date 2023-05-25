@@ -22,7 +22,7 @@ const NftCardLive = ({price, name, logo, creator}) => {
                 </div>
                 <div className={styles.timerBox}>
                     <span className={styles.boxName}>Ends In</span>
-                    <span className={styles.boxTimer}><Timer/></span>
+                    {/*<span className={styles.boxTimer}><Timer/></span>*/}
                 </div>
             </div>
             <div className={styles.headingContainer}>
