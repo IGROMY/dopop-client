@@ -4,12 +4,14 @@
   margin: 0 auto;
 }
 
-.darkLayout {
+.dark {
   @include layout;
   background-color:#000000;
+  color: #ffffff;
 }
 
-.lightLayout {
+.light {
   @include layout;
-background-color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
 }
