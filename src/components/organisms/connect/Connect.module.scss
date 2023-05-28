@@ -1,0 +1,67 @@
+.connectWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:10em;
+  .ellipseLeft {
+    filter: blur(10px);
+   // background: linear-gradient(147.74deg, #C574E0 11.92%, #3A8EF2 92.81%);
+  }
+
+  .containerConnect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .firstRow {
+      font-family: 'Ubuntu', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      color: #FFFFFF;
+
+    }
+
+    .secondRow {
+      font-family: 'Ubuntu', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      color: #FFFFFF;
+
+    }
+
+    .containerButton {
+      display: flex;
+      justify-content: center;
+      margin-top:5em;
+      width: 354px;
+      height: 90px;
+      background: linear-gradient(86.06deg, #F55AC3 2.66%, #9F5CEE 124.94%);
+      backdrop-filter: blur(25px);
+      border-radius: 80px;
+
+      .button {
+        white-space: nowrap;
+        width: 319px;
+        height: 90px;
+        border: none;
+        font: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2em;
+        line-height: 34px;
+        color: #FFFFFF;
+      }
+    }
+
+  }
+
+  .ellipseRight {
+    filter: blur(10px);
+    //background: linear-gradient(153.98deg, #EC5BAD 10.69%, #E47BB7 93.91%);
+  }
+}

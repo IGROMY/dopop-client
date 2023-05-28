@@ -1,0 +1,44 @@
+ .wrapper {
+   display: flex;
+   width: 1440px;
+   height: 367px;
+   background-color:#1A1A1A ;
+   justify-content: center;
+   align-items: center;
+  .containerFooter {
+    display: flex;
+    flex-direction: row;
+    .containerLogo {
+      display: flex;
+      flex-direction: column;
+      .input {
+
+      }
+    }
+
+    .containerMenu {
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .containerCreator {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .containerPages {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .containerDesign {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+  }
+ }

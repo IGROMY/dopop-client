@@ -10,6 +10,8 @@ import {ThemeProvider} from "./providers/ThemeProviders.jsx";
 import {useContext} from "react";
 import {ThemeContext} from "./providers/TheneContext.js";
 import cn from "classnames";
+import Connect from "./components/organisms/connect/Connect.jsx";
+import Footer from "./components/organisms/footer/Footer.jsx";
 function App() {
 const {data, loading} = useFetchData(`${API_URL}/nft`)
     const { isDark } = useContext(ThemeContext);
@@ -27,11 +29,13 @@ if(!data){
   return (
         <ThemeProvider>
             <div className={classes}>
-                 <Header/>
-                 <HeadingPage id='home'/>
-                 <Creator id='creators'/>
+                <Header/>
+                <HeadingPage id='home'/>
+                <Creator id='creators'/>
                 <ExploreRecent data={data} id='marketplace'/>
                 <LiveAuctions/>
+                <Connect/>
+                <Footer/>
             </div>
         </ThemeProvider>
   )

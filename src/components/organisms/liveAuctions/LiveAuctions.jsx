@@ -22,10 +22,9 @@ const LiveAuctions = () => {
     }
     return (
         <div className={styles.container}>
-            <div>
-                <Text variant="primary">Live </Text>
-                <Text variant="secondary">auctions</Text>
-            </div>
+            <div className={styles.containerHeading}>
+                <div className={styles.heading}> Live auctions </div>
+             </div>
             <div className={styles.fourCardsLive}>
                 <ul>
                     { !viewItems ? firstFourNFTs.map((nft) => (
