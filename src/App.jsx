@@ -5,40 +5,29 @@ import Creator from "./components/molecules/creator/Creator.jsx";
 import {useFetchData} from "./hooks/UseFetchData.js";
 import {API_URL} from "./helpers/fetchData.js";
 import LiveAuctions from "./components/organisms/liveAuctions/LiveAuctions.jsx";
-import styles from './App.module.scss'
-import {ThemeProvider} from "./providers/ThemeProviders.jsx";
-import {useContext} from "react";
-import {ThemeContext} from "./providers/TheneContext.js";
-import cn from "classnames";
-import Connect from "./components/organisms/connect/Connect.jsx";
-import Footer from "./components/organisms/footer/Footer.jsx";
+import Layout from "./components/templates/Layout";
+import Loader from "./components/molecules/loader/Loader";
+import ErrorPage from "./components/organisms/errorPage/ErrorPage";
+
 function App() {
-const {data, loading} = useFetchData(`${API_URL}/nft`)
-    const { isDark } = useContext(ThemeContext);
-console.log(isDark);
-    const classes = cn({
-        [styles.darkLayout]: isDark===true,
-        [styles.lightLayout]: isDark===false,
-    })
-if(loading){
-    return <div>loading...</div>
-}
-if(!data){
-    return <div>ERROR</div>
-}
-  return (
-        <ThemeProvider>
-            <div className={classes}>
-                <Header/>
-                <HeadingPage id='home'/>
-                <Creator id='creators'/>
-                <ExploreRecent data={data} id='marketplace'/>
-                <LiveAuctions/>
-                <Connect/>
-                <Footer/>
-            </div>
-        </ThemeProvider>
-  )
-}
+    const {data, loading} = useFetchData(`${API_URL}/nft`)
+
+    if(loading){
+        return <Loader/>
+    }
+    if(!data){
+        return <ErrorPage/>
+    }
+      return (
+          <>
+                <Layout>
+                    <HeadingPage id='home' data={data}/>
+                    <Creator id='creators'/>
+                    <ExploreRecent data={data} id='marketplace'/>
+                    <LiveAuctions data={data}/>
+                </Layout>
+          </>
+      )
+    }
 
 export default App

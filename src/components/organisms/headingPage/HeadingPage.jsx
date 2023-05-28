@@ -2,15 +2,10 @@ import styles from './HeadingPage.module.scss'
 import MarketWrapper from "../../molecules/MarketWrapper/MarketWrapper.jsx";
 import NFTCardAuction from "../../molecules/NFTCardAuction/NFTCardAuction.jsx";
 import NFTCardAuctionSmall from "../../molecules/NFTCardAuctionSmall/NFTCardAuctionSmall.jsx";
-import {useFetchData} from "../../../hooks/UseFetchData.js";
-import {API_URL} from "../../../helpers/fetchData.js";
-const HeadingPage = ({id}) => {
-    const {data, loading} = useFetchData(`${API_URL}/nft`)
+
+const HeadingPage = ({id, data}) => {
     const firstFourNFTs = data ? data.slice(0 , 4) : []
 
-    if(loading){
-        return <div>loading...</div>
-    }
     if(!data){
         return <div>ERROR</div>
     }

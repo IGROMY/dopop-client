@@ -1,4 +1,3 @@
-
 import styles from './Header.module.scss'
 import Logo from "../../atoms/logo/Logo.jsx";
 import HeaderText from "../../atoms/headerText/HeaderText.jsx";
@@ -6,12 +5,12 @@ import Search from "../../atoms/search/Search.jsx";
 import LightScheme from "../../atoms/lightScheme/LightScheme.jsx";
 import InlineSVG from "react-inlinesvg";
 import foxIcon from "../../../assets/icons/Group 235fox.svg"
-import {useContext} from "react";
-import {ThemeContext} from "../../../providers/TheneContext.js";
+import useThemeStore from "../../../providers/themeStore";
+
 const Header = () => {
-    const { toggleTheme } = useContext(ThemeContext);
+    const {  toggleTheme } = useThemeStore();
+
     const handleScroll = (sectionId) => () => {
-        console.log(sectionId, 'sectionId');
         const sectionElement = document.getElementById(sectionId);
         if(sectionElement) {
             sectionElement.scrollIntoView({ behavior: 'smooth' });
